@@ -1,0 +1,154 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  width: 100vw;
+  background-color: rgb(2, 83, 2);
+  font-family: cursive;
+  font-size: 1rem;
+  overflow: auto;
+}
+
+.table-container {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  flex: 1;
+  min-height: 400px;
+  min-width: 800px;
+}
+.inner-table {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  min-width: 85%;
+}
+
+.zeros-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 7%;
+}
+
+.column-container {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.zeros-bet {
+  color: white;
+  height: 34%;
+  border: 2px solid white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.column-bets {
+  color: white;
+  height: 22.5%;
+  border: 2px solid white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.inside-bets {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  flex: 1;
+  max-height: 70%;
+}
+
+.thirds {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  flex: 2;
+  max-height: 15%;
+}
+
+.even-bets {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  flex: 3;
+  max-height: 15%;
+}
+
+.bet {
+  padding: 2px;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.bet.red {
+  background-color: red;
+}
+
+.outside-bet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 2px solid white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.bet:hover,
+.outside-bet:hover,
+.zeros-bet:hover,
+.column-bets:hover,
+.surrounding-div {
+  background-color: rgba(173, 216, 230, 0.918) !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow effect */
+}
+
+.corner-bet {
+  position: relative;
+  z-index: 3;
+  width: 17%;
+  height: 20%;
+  left: 91%;
+  top: 64%;
+}
+
+.horizontal-neighbor {
+  position: relative;
+  z-index: 4;
+  width: 17%;
+  height: 20%;
+  left: 90%;
+}
+
+.vertical-neighbor {
+  position: relative;
+  z-index: 5;
+  width: 17%;
+  height: 20%;
+  left: 40%;
+  top: 25%;
+}
+
+.vertical-neighbor-special {
+  top: 64%;
+}
+
+.winning-bet {
+  background-color: rgba(0, 255, 0, 0.5) !important;
+}
+
+.losing-bet {
+  background-color: rgba(255, 0, 0, 0.884) !important;
+}

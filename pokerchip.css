@@ -1,0 +1,7 @@
+.pokerchip {
+  position: absolute;
+  z-index: 10;
+  max-width: 1.5rem; /* Set the desired width */
+  max-height: 1.5rem; /* Set the desired height */
+  /* transform: translate(89%, -114%); */
+}
